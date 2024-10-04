@@ -1,0 +1,164 @@
+<!--
+title: M36 HUB
+description: 
+published: true
+date: 2024-10-04T15:05:18.169Z
+tags: m36, m36-hub, fysetc
+editor: code
+dateCreated: 2024-10-04T15:05:18.169Z
+-->
+
+<body>
+    <h1>Fysetc M36 Toolhead Board</h1>
+
+    <h2>Overview</h2>
+    <p>The <strong>Fysetc M36 Toolhead Board</strong> is a specialized breakout board designed for use in CoreXY 3D printers, including Voron and other high-performance machines. This board consolidates various toolhead-related connections, making wiring cleaner and reducing the number of cables routed through the printer's moving parts.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li><strong>Compact Design</strong>: Small form factor makes it easy to mount directly to the toolhead.</li>
+        <li><strong>Simplified Wiring</strong>: Reduces cable management issues by centralizing connections to a single board.</li>
+        <li><strong>Support for Multiple Sensors and Devices</strong>: Compatible with thermistors, hotends, fans, and extruders.</li>
+        <li><strong>Standardized Connectors</strong>: Uses JST-XH connectors for easy plug-and-play integration with components.</li>
+        <li><strong>Compatible with 24V Systems</strong>: Designed to work with 24V-powered machines.</li>
+    </ul>
+
+    <h2>Technical Specifications</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Specification</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td><strong>Voltage</strong></td>
+            <td>24V</td>
+        </tr>
+        <tr>
+            <td><strong>Connectors</strong></td>
+            <td>JST-XH 2.54mm</td>
+        </tr>
+        <tr>
+            <td><strong>Supported Sensors</strong></td>
+            <td>Thermistor, PT1000, etc.</td>
+        </tr>
+        <tr>
+            <td><strong>Fan Support</strong></td>
+            <td>Part cooling, hotend fans</td>
+        </tr>
+        <tr>
+            <td><strong>Heater Support</strong></td>
+            <td>Up to 50W hotend heater</td>
+        </tr>
+        <tr>
+            <td><strong>LED Control</strong></td>
+            <td>Optional onboard control</td>
+        </tr>
+        <tr>
+            <td><strong>Stepper Driver</strong></td>
+            <td>None (requires external driver)</td>
+        </tr>
+        <tr>
+            <td><strong>Dimensions</strong></td>
+            <td>45mm x 45mm</td>
+        </tr>
+    </table>
+
+    <h2>Wiring Diagram</h2>
+    <pre>
+      +----------------------+
+      |     Fysetc M36        |
+      | --------------------  |
+      | | THERM1   | FAN1   | |
+      | | THERM2   | FAN2   | |
+      | | HEATER   | LED    | |
+      | | ENDSTOP  | EXTRDR | |
+      +----------------------+
+    </pre>
+    
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Pin</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>THERM1</td>
+            <td>Primary Thermistor Input (Hotend)</td>
+        </tr>
+        <tr>
+            <td>THERM2</td>
+            <td>Secondary Thermistor (Optional)</td>
+        </tr>
+        <tr>
+            <td>FAN1</td>
+            <td>Part Cooling Fan</td>
+        </tr>
+        <tr>
+            <td>FAN2</td>
+            <td>Hotend Fan</td>
+        </tr>
+        <tr>
+            <td>HEATER</td>
+            <td>Hotend Heater Output</td>
+        </tr>
+        <tr>
+            <td>LED</td>
+            <td>LED Control Output</td>
+        </tr>
+        <tr>
+            <td>ENDSTOP</td>
+            <td>Endstop Signal Input</td>
+        </tr>
+        <tr>
+            <td>EXTRDR</td>
+            <td>Extruder Motor Signal</td>
+        </tr>
+    </table>
+
+    <h2>Installation</h2>
+    <ol>
+        <li><strong>Mount the Board</strong>: Use the mounting holes to attach the M36 Toolhead Board to the toolhead carriage of your printer.</li>
+        <li><strong>Connect Components</strong>: Plug the thermistor, fans, heater, and other components into the appropriate JST-XH connectors on the M36 board.</li>
+        <li><strong>Wire to Mainboard</strong>: Route the consolidated wiring from the toolhead back to the mainboard. This reduces cable bulk and simplifies maintenance.</li>
+        <li><strong>Configure Firmware</strong>: Adjust your firmware settings to ensure proper communication with the M36 board, especially for temperature sensors and fan control.</li>
+    </ol>
+
+    <h2>Supported Firmware</h2>
+    <ul>
+        <li><strong>Klipper</strong>: Minimal configuration changes are required to integrate the M36 with Klipper firmware. Just ensure that the thermistor type, heater settings, and fan control pins are correctly configured.</li>
+        <li><strong>Marlin</strong>: Use standard Marlin configuration files to assign the correct pin numbers for each function (thermistors, fans, heaters, etc.).</li>
+    </ul>
+
+    <h2>Pros and Cons</h2>
+    <h3>Pros</h3>
+    <ul>
+        <li>Simplifies wiring and reduces moving cable bulk.</li>
+        <li>Compact and easy to install on most toolheads.</li>
+        <li>Supports a wide variety of sensors and fans.</li>
+        <li>Clean design with JST connectors for reliability.</li>
+    </ul>
+
+    <h3>Cons</h3>
+    <ul>
+        <li>No built-in stepper drivers; external stepper driver required.</li>
+        <li>Requires firmware configuration for proper functionality.</li>
+    </ul>
+
+    <h2>Availability</h2>
+    <p>The Fysetc M36 Toolhead Board can be purchased from various online retailers. It is often available from:</p>
+    <ul>
+        <li><a href="https://www.fysetc.com">Fysetc Store</a></li>
+        <li>Aliexpress: Search for "Fysetc M36 Toolhead Board"</li>
+        <li>Amazon: Available through various resellers.</li>
+    </ul>
+
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://wiki.fysetc.com/M36/">Official Documentation</a></li>
+        <li><a href="https://www.klipper3d.org/">Klipper Configuration Guide</a></li>
+        <li>Community Support: Voron and Fysetc user groups on Discord and Reddit offer active discussion and troubleshooting help.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>The Fysetc M36 Toolhead Board is a great addition to any CoreXY 3D printer, particularly Voron builds, as it helps streamline wiring and simplifies maintenance. Its compact design, paired with broad component support, makes it an excellent choice for users looking to enhance their toolhead setup.</p>
+
+</body>
