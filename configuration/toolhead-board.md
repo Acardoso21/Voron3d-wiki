@@ -2,7 +2,7 @@
 title: List of Toolheadboards
 description: 
 published: true
-date: 2024-10-04T21:14:36.630Z
+date: 2024-10-04T21:15:19.919Z
 tags: canbus, ebb36, ebb42, sht-36
 editor: markdown
 dateCreated: 2024-10-04T20:40:47.986Z
@@ -77,5 +77,3 @@ This board connects via USB for printers that use USB for communication and powe
 Why it's good: Simple USB communication, plug-and-play support
 
 [More Info](usb-toolhead-board.html) | [Buy Now](https://www.example.com)
-
-.board { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; display: flex; align-items: center; } .board img { margin-right: 15px; } .board h3 { margin: 0; } .board a { margin-right: 10px; }
